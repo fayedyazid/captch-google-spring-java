@@ -11,7 +11,7 @@ public class ServiceCaptcha {
 
     public boolean verifiercaptcha(String captcha){
         String url= "https://www.google.com/recaptcha/api/siteverify";
-        String params="?secret=6LeCqqscAAAAAEwPkb4V9nV4Zn1LELt-GmjQDKxf&response="+captcha;
+        String params="?secret=key2&response="+captcha;
         String completeUrl=url+params;
         CaptchaResponse resp= restT.postForObject(completeUrl, null, CaptchaResponse.class);
         return resp.isSuccess();
