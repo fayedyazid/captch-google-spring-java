@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+<div class="container p-3 my-3 border">
+    <div class="card-header bg-info text-black">
+        <h3>Test de captcha</h3>
+    </div>
+    <div class="card-body">
+        <form action="#" th:action="@{/captchaspring}" method="POST" >
+
+            <br/>
+
+            <br/>
+            <div class="row">
+                <div class="col-2"> Validate reCAPTCHA</div>
+                <div class="col-4">
+                    <div class="g-recaptcha" data-sitekey="6LeCqqscAAAAAPzKg9YURc50JJKOVAuYNvCV3A5E"></div>
+                </div>
+            </div>
+
+            <br/>
+            <input type="submit" value="validercptcha" class="btn btn-success"/>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
